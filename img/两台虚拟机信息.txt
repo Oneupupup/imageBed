@@ -1,0 +1,21 @@
+Ubuntu(Server):  192.168.228.129
+
+CentOS(Client)： 192.168.228.131
+
+
+默认网关：192.168.228.1
+
+
+sudo tcpdump -i ens33 -ent '(dst 192.168.228.129 and src 192.168.228.131)or (dst 192.168.228.131 and src 192.168.228.129)' -v
+
+
+sudo tcpdump -i ens33 -nt '(dst 192.168.228.129 and src 192.168.228.131)or (dst 192.168.228.130 and src 192.168.78.129)' -v
+
+sudo tcpdump -nt -i port 12345
+
+
+
+
+监听端口号状态：netstat -nt |grep  XXport
+telnet登录： telnet 192.168.228.129 12345
+ssh登录：ssh 192.168.228.129
